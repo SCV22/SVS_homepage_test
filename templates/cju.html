@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
@@ -65,17 +65,17 @@
     </div>
     <!-- //유투브 영상을 위처럼 선언해두고 바디부분에서 끌어당겨 쓰는 형식 -->
 
-    <script src="three.min.js"></script>
-    <script src="panolens.min.js"></script>
-
+    <script src="../static/js/three.min.js"></script>
+    <script src="../static/js/panolens.min.js"></script>
+    
     <script>
       var panorama1, panorama2, panorama3, panorama4, viewer
       var infospot, infospot2, infospot3
 
-      panorama1 = new PANOLENS.ImagePanorama( './DJI_0000.JPG' );
-      panorama2 = new PANOLENS.ImagePanorama( './DJI_0001.JPG' );
-      panorama3 = new PANOLENS.ImagePanorama( './DJI_0002.JPG' );
-      panorama4 = new PANOLENS.ImagePanorama( './DJI_0003.JPG' );
+      panorama1 = new PANOLENS.ImagePanorama("/static/assets/DJI_0000.JPG");
+      panorama2 = new PANOLENS.ImagePanorama("/static/assets/DJI_0001.JPG");
+      panorama3 = new PANOLENS.ImagePanorama("/static/assets/DJI_0002.JPG");
+      panorama4 = new PANOLENS.ImagePanorama("/static/assets/DJI_0003.JPG");
 
 
       //const panoImage = './panorama_images/sky_view_test.jpg';
@@ -138,16 +138,16 @@
       });
 
     //Linking between panorama images
-      panorama1.link(panorama2, new THREE.Vector3(5000, -1500, 400), 700, 'direction_pointer.png');
-      panorama2.link(panorama1, new THREE.Vector3(-5000, -1000, 200), 700, 'direction_pointer2.png');
+      panorama1.link(panorama2, new THREE.Vector3(5000, -1500, 400), 700, '/static/assets/direction_pointer.png');
+      panorama2.link(panorama1, new THREE.Vector3(-5000, -1000, 200), 700, '/static/assets/direction_pointer2.png');
 
-      panorama2.link(panorama3, new THREE.Vector3(5000, -1500, 400), 700, 'direction_pointer.png');
-      panorama3.link(panorama2, new THREE.Vector3(-5000, -1500, -400), 700, 'direction_pointer.png');
+      panorama2.link(panorama3, new THREE.Vector3(5000, -1500, 400), 700, '/static/assets/direction_pointer.png');
+      panorama3.link(panorama2, new THREE.Vector3(-5000, -1500, -400), 700, '/static/assets/direction_pointer.png');
 
-      panorama3.link(panorama4, new THREE.Vector3(5000, -1500, 400), 700, 'direction_pointer.png');
-      panorama4.link(panorama3, new THREE.Vector3(-5000, -1500, 1000), 700, 'direction_pointer.png');
+      panorama3.link(panorama4, new THREE.Vector3(5000, -1500, 400), 700, '/static/assets/direction_pointer.png');
+      panorama4.link(panorama3, new THREE.Vector3(-5000, -1500, 1000), 700, '/static/assets/direction_pointer.png');
 
-    </script>
+      </script>
 
   </body>
 </html>

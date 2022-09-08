@@ -26,6 +26,9 @@ def contact():
 def portfolio():
     return render_template('portfolio.html')
 
+@app.route('/cju')
+def cju():
+    return render_template('cju.html')
 
 
 # @app.route("/mars", methods=["POST"])
